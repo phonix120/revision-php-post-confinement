@@ -49,6 +49,21 @@ $nb = count($donnees);
 <hr>
     <br><h3>Exercice</h3>
     <p>En utilisant le tableau $donnees et $nb, affichez grâce au modulo 1 ligne sur 3 en jaune, 2 lignes sur 3 en blanc (1 jaune, 2 blancs, etc....) Uttilisez le for comme l'exemple ci-dessus</p>
+    
+    <div>
+    <table align="left">
+    <tr><td>Pays</td></tr>
+    <?php
+    // tant qu'on a des éléments dans le tableau
+    for($i=0;$i<$nb;$i++){
+        // utilisation d'une ternaire pour changer la couleur en cas de ligne paire ou impaire
+        $couleur = ($i%3)?"#FFF":"#FFFF00";
+        // affichage de la ligne avec la couleur
+        echo "<tr><td style='background-color: $couleur'>$donnees[$i]</td></tr>";
+    }
+    ?>
+</table>
+</div>
     <br>
     <div>
         <table align="left">
